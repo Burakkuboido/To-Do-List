@@ -26,20 +26,12 @@ listContainerDF.addEventListener("click", function(e) {
     }
 }, false);
 
-
-function saveData() {
-    localStorage.setItem("data", listContainerDF.innerHTML);
-}
-
-function showTask(){
-    listContainerDF.innerHTML = localStorage.getItem("data")
-}
-
 function toggleDF() {
     var x = document.getElementById("list-containerDF");
     var y = document.getElementById("rowDF");
     x.classList.toggle('active');
     y.classList.toggle('active');
+    saveData();
 }
 
 
@@ -78,15 +70,6 @@ listContainerSL.addEventListener("click", function(e) {
 }, false);
 
 
-function saveData() {
-    localStorage.setItem("data", listContainerSL.innerHTML);
-}
-
-function showTask(){
-    listContainerSL.innerHTML = localStorage.getItem("data")
-}
-showTask();
-
 
 function toggleSL() {
     var x = document.getElementById("list-containerSL");
@@ -100,4 +83,17 @@ const daily = document.getElementById("dailyTab")
 if (tabName.innerHTML === "Daily") {
     daily.style.borderBottom = "0px solid white";
     daily.style.backgroundColor = "white"
+}
+showTask();
+
+
+
+function saveData() {
+    localStorage.setItem("data", listContainerDF.innerHTML);
+    localStorage.setItem("data1", listContainerSL.innerHTML)
+}
+
+function showTask(){
+    listContainerDF.innerHTML = localStorage.getItem("data")
+    listContainerSL.innerHTML = localStorage.getItem("data1")
 }
