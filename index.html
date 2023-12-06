@@ -9,16 +9,47 @@
 </head>
 <body>
     <div class="container">
+        <nav>
+            <ol>
+                <li id="dailyTab">Daily</li>
+                <li>Weekly</li>
+                <li>Instances</li>
+                <li>Achievements</li>
+                <li>Collections</li>
+            </ol>
+        </nav>
         <div class="todo-app">
-            <h2>To-Do List <img src="images/icon.png" alt=""></h2>
-            <div class="row">
-                <input type="text" id="input-box" placeholder="Add Your Text">
-                <button onclick="addTask()">Add</button>
+            <div>
+                <h2 id="tabName">Daily</h2>
+                <div class="items">
+                    <h2>Dragonflight</h2>
+                    <button onclick="toggleDF()" class="fa fa-arrow-down"></button>
+                </div>
             </div>
-            <ul id="list-container">
-                <!-- <li class="checked">Task1</li>
-                <li>Task2</li>
-                <li>Task3</li> -->
+            <div id="rowDF">
+                <input type="text" id="input-boxDF" placeholder="Add Your Text">
+                <button class="addTask" onclick="addTaskDF()">Add</button>
+            </div>
+            <ul id="list-containerDF">
+                <!-- <li class="checked">Test 1</li>
+                <li>Test 2</li>
+                <li>Test 3</li> -->
+            </ul>
+
+
+
+            <div class="items">
+                <h2>Shadowlands</h2>
+                <button onclick="toggleSL()" class="fa fa-arrow-down"></button>
+            </div>
+            <div id="rowSL">
+                <input type="text" id="input-boxSL" placeholder="Add Your Text">
+                <button class="addTask" onclick="addTaskSL()">Add</button>
+            </div>
+            <ul id="list-containerSL">
+                <!-- <li class="checked">Test 1</li>
+                <li>Test 2</li>
+                <li>Test 3</li> -->
             </ul>
         </div>
     </div>
