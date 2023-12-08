@@ -36,7 +36,15 @@
 }
 
 #rowDF,
-#rowSL {
+#rowSL,
+#rowBFA,
+#rowL,
+#rowWOD,
+#rowMOP,
+#rowC,
+#rowWOTLK,
+#rowBC,
+#rowClassic {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -141,20 +149,52 @@ h2 {
 
 #list-containerDF,
 #list-containerSL,
+#list-containerBFA,
+#list-containerL,
+#list-containerWOD,
+#list-containerMOP,
+#list-containerC,
+#list-containerWOTLK,
+#list-containerBC,
+#list-containerClassic,
 #rowDF,
-#rowSL {
+#rowSL,
+#rowBFA,
+#rowL,
+#rowWOD,
+#rowMOP,
+#rowC,
+#rowWOTLK,
+#rowBC,
+#rowClassic {
     display: none;
     margin-bottom: 20px;
 }
   
 #list-containerDF.active,
-#list-containerSL.active {
+#list-containerSL.active,
+#list-containerBFA.active,
+#list-containerL.active,
+#list-containerWOD.active,
+#list-containerMOP.active,
+#list-containerC.active,
+#list-containerWOTLK.active,
+#list-containerBC.active,
+#list-containerClassic.active {
     height: auto;
     display: block;
 }
 
 #rowDF.active,
-#rowSL.active {
+#rowSL.active,
+#rowBFA.active,
+#rowL.active,
+#rowWOD.active,
+#rowMOP.active,
+#rowC.active,
+#rowWOTLK.active,
+#rowBC.active,
+#rowClassic.active {
     height: auto;
     display: flex;
 }
@@ -165,4 +205,12 @@ h2 {
     justify-content: center;
     gap: 1em;
 }
-    
+
+.noSelect{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
