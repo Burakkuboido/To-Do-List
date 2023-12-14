@@ -11,24 +11,24 @@
     <div class="container">
         <nav>
             <ol>
-                <li id="active"><a href="/index.html">Daily</a></li>
+                <li><a href="/index.html">Daily</a></li>
                 <li><a href="/weekly.html">Weekly</a></li>
-                <li> <a href="/instances.html">Instances</a></li>
+                <li id="active"> <a href="/instances.html">Instances</a></li>
                 <li><a href="/achievements.html">Achievements</a></li>
                 <li><a href="/collections.html">Collections</a></li>
             </ol>
         </nav>
         <div class="todo-app">
             <div>
-                <h1 id="tabName">Daily</h1>
+                <h1 id="tabName">Instances</h1>
                 <div class="items">
                     <h2>Dragonflight</h2>
-                    <button onclick="toggleDF()" class="fa fa-arrow-down submit"></button>
+                    <button onclick="toggleDFI()" class="fa fa-arrow-down submit"></button>
                 </div>
             </div>
             <div id="rowDF">
                 <input type="text" id="input-boxDF" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskDF()">Add</button>
+                <button class="addTask" onclick="addTaskDFI()">Add</button>
             </div>
             <ul id="list-containerDF">
                 <!-- <li class="checked">Test 1</li>
@@ -40,11 +40,11 @@
 
             <div class="items">
                 <h2>Shadowlands</h2>
-                <button onclick="toggleSL()" class="fa fa-arrow-down"></button>
+                <button onclick="toggleSLI()" class="fa fa-arrow-down"></button>
             </div>
             <div id="rowSL">
                 <input type="text" id="input-boxSL" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskSL()">Add</button>
+                <button class="addTask" onclick="addTaskSLI()">Add</button>
             </div>
             <ul id="list-containerSL">
                 <!-- <li class="checked">Test 1</li>
@@ -56,11 +56,11 @@
 
             <div class="items">
                 <h2>Battle for Azeroth</h2>
-                <button onclick="toggleBFA()" class="fa fa-arrow-down"></button>
+                <button onclick="toggleBFAI()" class="fa fa-arrow-down"></button>
             </div>
             <div id="rowBFA">
                 <input type="text" id="input-boxBFA" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskBFA()">Add</button>
+                <button class="addTask" onclick="addTaskBFAI()">Add</button>
             </div>
             <ul id="list-containerBFA">
                 <!-- <li class="checked">Test 1</li>
@@ -72,11 +72,11 @@
 
             <div class="items">
                 <h2>Legion</h2>
-                <button onclick="toggleL()" class="fa fa-arrow-down"></button>
+                <button onclick="toggleLI()" class="fa fa-arrow-down"></button>
             </div>
             <div id="rowL">
                 <input type="text" id="input-boxL" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskL()">Add</button>
+                <button class="addTask" onclick="addTaskLI()">Add</button>
             </div>
             <ul id="list-containerL">
                 <!-- <li class="checked">Test 1</li>
@@ -88,11 +88,11 @@
 
             <div class="items">
                 <h2>Warlords of Draenor</h2>
-                <button onclick="toggleWOD()" class="fa fa-arrow-down"></button>
+                <button onclick="toggleWODI()" class="fa fa-arrow-down"></button>
             </div>
             <div id="rowWOD">
                 <input type="text" id="input-boxWOD" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskWOD()">Add</button>
+                <button class="addTask" onclick="addTaskWODI()">Add</button>
             </div>
             <ul id="list-containerWOD">
                 <!-- <li class="checked">Test 1</li>
@@ -104,11 +104,11 @@
 
             <div class="items">
                 <h2>Mists of Pandaria</h2>
-                <button onclick="toggleMOP()" class="fa fa-arrow-down"></button>
+                <button onclick="toggleMOPI()" class="fa fa-arrow-down"></button>
             </div>
             <div id="rowMOP">
                 <input type="text" id="input-boxMOP" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskMOP()">Add</button>
+                <button class="addTask" onclick="addTaskMOPI()">Add</button>
             </div>
             <ul id="list-containerMOP">
                 <!-- <li class="checked">Test 1</li>
@@ -120,11 +120,11 @@
 
             <div class="items">
                 <h2>Cataclysm</h2>
-                <button onclick="toggleC()" class="fa fa-arrow-down"></button>
+                <button onclick="toggleCI()" class="fa fa-arrow-down"></button>
             </div>
             <div id="rowC">
                 <input type="text" id="input-boxC" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskC()">Add</button>
+                <button class="addTask" onclick="addTaskCI()">Add</button>
             </div>
             <ul id="list-containerC">
                 <!-- <li class="checked">Test 1</li>
@@ -136,11 +136,11 @@
 
             <div class="items">
                 <h2>Wrath of the Lich King</h2>
-                <button onclick="toggleWOTLK()" class="fa fa-arrow-down"></button>
+                <button onclick="toggleWOTLKI()" class="fa fa-arrow-down"></button>
             </div>
             <div id="rowWOTLK">
                 <input type="text" id="input-boxWOTLK" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskWOTLK()">Add</button>
+                <button class="addTask" onclick="addTaskWOTLKI()">Add</button>
             </div>
             <ul id="list-containerWOTLK">
                 <!-- <li class="checked">Test 1</li>
@@ -152,11 +152,11 @@
 
             <div class="items">
                 <h2>Burning Crusade</h2>
-                <button onclick="toggleBC()" class="fa fa-arrow-down"></button>
+                <button onclick="toggleBCI()" class="fa fa-arrow-down"></button>
             </div>
             <div id="rowBC">
                 <input type="text" id="input-boxBC" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskBC()">Add</button>
+                <button class="addTask" onclick="addTaskBCI()">Add</button>
             </div>
             <ul id="list-containerBC">
                 <!-- <li class="checked">Test 1</li>
@@ -168,11 +168,11 @@
 
             <div class="items">
                 <h2>Classic</h2>
-                <button onclick="toggleClassic()" class="fa fa-arrow-down"></button>
+                <button onclick="toggleClassicI()" class="fa fa-arrow-down"></button>
             </div>
             <div id="rowClassic">
                 <input type="text" id="input-boxClassic" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskClassic()">Add</button>
+                <button class="addTask" onclick="addTaskClassicI()">Add</button>
             </div>
             <ul id="list-containerClassic">
                 <!-- <li class="checked">Test 1</li>
@@ -183,5 +183,5 @@
     </div>
     
 </body>
-<script src="/To-Do-List/scripts.js"></script>
+<script src="/To-Do-List/instances.js"></script>
 </html>

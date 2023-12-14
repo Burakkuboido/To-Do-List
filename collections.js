@@ -1,9 +1,5 @@
-function onLoad() {
-    
-}
-
 const inputBoxDF = document.getElementById("input-boxDF")
-const listContainerDF = document.getElementById("list-containerDF")
+const listContainerDFC = document.getElementById("list-containerDF")
 
 function addTaskDF() {
     if(inputBoxDF.value === '') {
@@ -11,7 +7,7 @@ function addTaskDF() {
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxDF.value;
-        listContainerDF.appendChild(li);
+        listContainerDFC.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
@@ -20,7 +16,7 @@ function addTaskDF() {
     saveData();
 }
 
-listContainerDF.addEventListener("click", function(e) {
+listContainerDFC.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
@@ -46,7 +42,7 @@ function toggleDF() {
 
 
 const inputBoxSL = document.getElementById("input-boxSL")
-const listContainerSL = document.getElementById("list-containerSL")
+const listContainerSLC = document.getElementById("list-containerSL")
 
 function addTaskSL() {
     if(inputBoxSL.value === '') {
@@ -54,7 +50,7 @@ function addTaskSL() {
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxSL.value;
-        listContainerSL.appendChild(li);
+        listContainerSLC.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
@@ -63,7 +59,7 @@ function addTaskSL() {
     saveData();
 }
 
-listContainerSL.addEventListener("click", function(e) {
+listContainerSLC.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
@@ -87,7 +83,7 @@ function toggleSL() {
 
 
 const inputBoxBFA = document.getElementById("input-boxBFA")
-const listContainerBFA = document.getElementById("list-containerBFA")
+const listContainerBFAC = document.getElementById("list-containerBFA")
 
 function addTaskBFA() {
     if(inputBoxBFA.value === '') {
@@ -95,7 +91,7 @@ function addTaskBFA() {
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxBFA.value;
-        listContainerBFA.appendChild(li);
+        listContainerBFAC.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
@@ -104,7 +100,7 @@ function addTaskBFA() {
     saveData();
 }
 
-listContainerBFA.addEventListener("click", function(e) {
+listContainerBFAC.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
@@ -127,7 +123,7 @@ function toggleBFA() {
 
 
 const inputBoxL = document.getElementById("input-boxL")
-const listContainerL = document.getElementById("list-containerL")
+const listContainerLC = document.getElementById("list-containerL")
 
 function addTaskL() {
     if(inputBoxL.value === '') {
@@ -135,7 +131,7 @@ function addTaskL() {
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxL.value;
-        listContainerL.appendChild(li);
+        listContainerLC.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
@@ -144,7 +140,7 @@ function addTaskL() {
     saveData();
 }
 
-listContainerL.addEventListener("click", function(e) {
+listContainerLC.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
@@ -173,7 +169,7 @@ function toggleL() {
 
 
 const inputBoxWOD = document.getElementById("input-boxWOD")
-const listContainerWOD = document.getElementById("list-containerWOD")
+const listContainerWODC = document.getElementById("list-containerWOD")
 
 function addTaskWOD() {
     if(inputBoxWOD.value === '') {
@@ -181,7 +177,7 @@ function addTaskWOD() {
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxWOD.value;
-        listContainerWOD.appendChild(li);
+        listContainerWODC.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
@@ -190,7 +186,7 @@ function addTaskWOD() {
     saveData();
 }
 
-listContainerWOD.addEventListener("click", function(e) {
+listContainerWODC.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
@@ -220,7 +216,7 @@ function toggleWOD() {
 
 
 const inputBoxMOP = document.getElementById("input-boxMOP")
-const listContainerMOP = document.getElementById("list-containerMOP")
+const listContainerMOPC = document.getElementById("list-containerMOP")
 
 function addTaskMOP() {
     if(inputBoxMOP.value === '') {
@@ -228,7 +224,7 @@ function addTaskMOP() {
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxMOP.value;
-        listContainerMOP.appendChild(li);
+        listContainerMOPC.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
@@ -237,7 +233,7 @@ function addTaskMOP() {
     saveData();
 }
 
-listContainerMOP.addEventListener("click", function(e) {
+listContainerMOPC.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
@@ -270,7 +266,7 @@ function toggleMOP() {
 
 
 const inputBoxC = document.getElementById("input-boxC")
-const listContainerC = document.getElementById("list-containerC")
+const listContainerCC = document.getElementById("list-containerC")
 
 function addTaskC() {
     if(inputBoxC.value === '') {
@@ -278,7 +274,7 @@ function addTaskC() {
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxC.value;
-        listContainerC.appendChild(li);
+        listContainerCC.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
@@ -287,7 +283,7 @@ function addTaskC() {
     saveData();
 }
 
-listContainerC.addEventListener("click", function(e) {
+listContainerCC.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
@@ -325,7 +321,7 @@ function toggleC() {
 
 
 const inputBoxWOTLK = document.getElementById("input-boxWOTLK")
-const listContainerWOTLK = document.getElementById("list-containerWOTLK")
+const listContainerWOTLKC = document.getElementById("list-containerWOTLK")
 
 function addTaskWOTLK() {
     if(inputBoxWOTLK.value === '') {
@@ -333,7 +329,7 @@ function addTaskWOTLK() {
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxWOTLK.value;
-        listContainerWOTLK.appendChild(li);
+        listContainerWOTLKC.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
@@ -342,7 +338,7 @@ function addTaskWOTLK() {
     saveData();
 }
 
-listContainerWOTLK.addEventListener("click", function(e) {
+listContainerWOTLKC.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
@@ -385,7 +381,7 @@ function toggleWOTLK() {
 
 
 const inputBoxBC = document.getElementById("input-boxBC")
-const listContainerBC = document.getElementById("list-containerBC")
+const listContainerBCC = document.getElementById("list-containerBC")
 
 function addTaskBC() {
     if(inputBoxBC.value === '') {
@@ -393,7 +389,7 @@ function addTaskBC() {
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxBC.value;
-        listContainerBC.appendChild(li);
+        listContainerBCC.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
@@ -402,7 +398,7 @@ function addTaskBC() {
     saveData();
 }
 
-listContainerBC.addEventListener("click", function(e) {
+listContainerBCC.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
@@ -440,7 +436,7 @@ function toggleBC() {
 
 
 const inputBoxClassic = document.getElementById("input-boxClassic")
-const listContainerClassic = document.getElementById("list-containerClassic")
+const listContainerClassicC = document.getElementById("list-containerClassic")
 
 function addTaskClassic() {
     if(inputBoxClassic.value === '') {
@@ -448,7 +444,7 @@ function addTaskClassic() {
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxClassic.value;
-        listContainerClassic.appendChild(li);
+        listContainerClassicC.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
@@ -457,7 +453,7 @@ function addTaskClassic() {
     saveData();
 }
 
-listContainerClassic.addEventListener("click", function(e) {
+listContainerClassicC.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
@@ -480,36 +476,36 @@ function toggleClassic() {
 
 
 function saveData() {
-    localStorage.setItem("data", listContainerDF.innerHTML);
-    localStorage.setItem("data1", listContainerSL.innerHTML);
-    localStorage.setItem("data2", listContainerBFA.innerHTML);
-    localStorage.setItem("data3", listContainerL.innerHTML);
-    localStorage.setItem("data4", listContainerWOD.innerHTML);
-    localStorage.setItem("data5", listContainerMOP.innerHTML);
-    localStorage.setItem("data6", listContainerC.innerHTML);
-    localStorage.setItem("data7", listContainerWOTLK.innerHTML);
-    localStorage.setItem("data8", listContainerBC.innerHTML);
-    localStorage.setItem("data9", listContainerClassic.innerHTML);
+    localStorage.setItem("dataC", listContainerDFC.innerHTML);
+    localStorage.setItem("dataC1", listContainerSLC.innerHTML);
+    localStorage.setItem("dataC2", listContainerBFAC.innerHTML);
+    localStorage.setItem("dataC3", listContainerLC.innerHTML);
+    localStorage.setItem("dataC4", listContainerWODC.innerHTML);
+    localStorage.setItem("dataC5", listContainerMOPC.innerHTML);
+    localStorage.setItem("dataC6", listContainerCC.innerHTML);
+    localStorage.setItem("dataC7", listContainerWOTLKC.innerHTML);
+    localStorage.setItem("dataC8", listContainerBCC.innerHTML);
+    localStorage.setItem("dataC9", listContainerClassicC.innerHTML);
 }
 
 function showTask(){
-    listContainerDF.innerHTML = localStorage.getItem("data");
-    listContainerSL.innerHTML = localStorage.getItem("data1");
-    listContainerBFA.innerHTML = localStorage.getItem("data2");
-    listContainerL.innerHTML = localStorage.getItem("data3");
-    listContainerWOD.innerHTML = localStorage.getItem("data4");
-    listContainerMOP.innerHTML = localStorage.getItem("data5");
-    listContainerC.innerHTML = localStorage.getItem("data6");
-    listContainerWOTLK.innerHTML = localStorage.getItem("data7");
-    listContainerBC.innerHTML = localStorage.getItem("data8");
-    listContainerClassic.innerHTML = localStorage.getItem("data9");
+    listContainerDFC.innerHTML = localStorage.getItem("dataC");
+    listContainerSLC.innerHTML = localStorage.getItem("dataC1");
+    listContainerBFAC.innerHTML = localStorage.getItem("dataC2");
+    listContainerLC.innerHTML = localStorage.getItem("dataC3");
+    listContainerWODC.innerHTML = localStorage.getItem("dataC4");
+    listContainerMOPC.innerHTML = localStorage.getItem("dataC5");
+    listContainerCC.innerHTML = localStorage.getItem("dataC6");
+    listContainerWOTLKC.innerHTML = localStorage.getItem("dataC7");
+    listContainerBCC.innerHTML = localStorage.getItem("dataC8");
+    listContainerClassicC.innerHTML = localStorage.getItem("dataC9");
 }
 
 
 var input = document.getElementById("input-boxDF");
 input.addEventListener("keypress", function(e) {
     if(e.key === "Enter") {
-
+        console.log()
         addTaskDF();
     }
 });
@@ -587,52 +583,52 @@ setInterval(getListElements, 1000)
 
 
 function getListElements(){
-  var li = listContainerDF.getElementsByTagName("li");
+  var li = listContainerDFC.getElementsByTagName("li");
   for (let x = 0; x < li.length; x++) {
     li[x].onmousedown = pickItem;
     li[x].onmouseover = moveItem;
   }
-  var lo = listContainerSL.getElementsByTagName("li");
+  var lo = listContainerSLC.getElementsByTagName("li");
   for (let y = 0; y < lo.length; y++) {
     lo[y].onmousedown = pickItem;
     lo[y].onmouseover = moveItem;
   }
-  var le = listContainerBFA.getElementsByTagName("li");
+  var le = listContainerBFAC.getElementsByTagName("li");
   for (let z = 0; z < le.length; z++) {
     le[z].onmousedown = pickItem;
     le[z].onmouseover = moveItem;
   }
-  var L = listContainerL.getElementsByTagName("li");
+  var L = listContainerLC.getElementsByTagName("li");
   for (let l = 0; l < L.length; l++) {
     L[l].onmousedown = pickItem;
     L[l].onmouseover = moveItem;
   }
-  var wod = listContainerWOD.getElementsByTagName("li");
+  var wod = listContainerWODC.getElementsByTagName("li");
   for (let w = 0; w < wod.length; w++) {
     wod[w].onmousedown = pickItem;
     wod[w].onmouseover = moveItem;
   }
-  var mop = listContainerMOP.getElementsByTagName("li");
+  var mop = listContainerMOPC.getElementsByTagName("li");
   for (let m = 0; m < mop.length; m++) {
     mop[m].onmousedown = pickItem;
     mop[m].onmouseover = moveItem;
   }
-  var c = listContainerC.getElementsByTagName("li");
+  var c = listContainerCC.getElementsByTagName("li");
   for (let u = 0; u < c.length; u++) {
     c[u].onmousedown = pickItem;
     c[u].onmouseover = moveItem;
   }
-  var wotlk = listContainerWOTLK.getElementsByTagName("li");
+  var wotlk = listContainerWOTLKC.getElementsByTagName("li");
   for (let o = 0; o < wotlk.length; o++) {
     wotlk[o].onmousedown = pickItem;
     wotlk[o].onmouseover = moveItem;
   }
-  var bc = listContainerBC.getElementsByTagName("li");
+  var bc = listContainerBCC.getElementsByTagName("li");
   for (let t = 0; t < bc.length; t++) {
     bc[t].onmousedown = pickItem;
     bc[t].onmouseover = moveItem;
   }
-  var classic = listContainerClassic.getElementsByTagName("li");
+  var classic = listContainerClassicC.getElementsByTagName("li");
   for (let classi = 0; classi < classic.length; classi++) {
     classic[classi].onmousedown = pickItem;
     classic[classi].onmouseover = moveItem;
