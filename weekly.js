@@ -1,18 +1,35 @@
 const inputBoxDF = document.getElementById("input-boxDF")
 const listContainerDFW = document.getElementById("list-containerDF")
+const inputCatDFW = document.getElementById("input-catagoryDF")
 
-function addTaskDFW() {
+function addTaskDF() {
     if(inputBoxDF.value === '') {
         alert ("You must write something!");
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxDF.value;
+        li.classList.add("task");
         listContainerDFW.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
     }
     inputBoxDF.value = "";
+    saveData();
+}
+
+function addCatagoryDF() {
+    if(inputCatDFW.value === '') {
+        alert ("You must write something!");
+    } else {
+        let header = document.createElement("h5");
+        header.innerHTML = inputCatDFW.value;
+        listContainerDFW.appendChild(header);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7"
+        header.appendChild(span);
+    }
+    inputCatDFW.value = "";  
     saveData();
 }
 
@@ -26,11 +43,12 @@ listContainerDFW.addEventListener("click", function(e) {
     }
 }, false);
 
-function toggleDFW() {
+function toggleDF() {
     var x = document.getElementById("list-containerDF");
-    var y = document.getElementById("rowDF");
+    var y = document.getElementsByClassName("rowDF");
     x.classList.toggle('active');
-    y.classList.toggle('active');
+    y[0].classList.toggle('active');
+    y[1].classList.toggle('active')
     saveData();
 }
 
@@ -42,15 +60,17 @@ function toggleDFW() {
 
 
 const inputBoxSL = document.getElementById("input-boxSL")
-const listContainerSLW = document.getElementById("list-containerSL")
+const listContainerSL = document.getElementById("list-containerSL")
+const inputCatSL = document.getElementById("input-catagorySL")
 
-function addTaskSLW() {
+function addTaskSL() {
     if(inputBoxSL.value === '') {
         alert ("You must write something!");
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxSL.value;
-        listContainerSLW.appendChild(li);
+        li.classList.add("task");
+        listContainerSL.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
@@ -59,7 +79,22 @@ function addTaskSLW() {
     saveData();
 }
 
-listContainerSLW.addEventListener("click", function(e) {
+function addCatagorySL() {
+    if(inputCatSL.value === '') {
+        alert ("You must write something!");
+    } else {
+        let header = document.createElement("h5");
+        header.innerHTML = inputCatSL.value;
+        listContainerSL.appendChild(header);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7"
+        header.appendChild(span);
+    }
+    inputCatSL.value = "";  
+    saveData();
+}
+
+listContainerSL.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
@@ -71,33 +106,32 @@ listContainerSLW.addEventListener("click", function(e) {
 
 
 
-function toggleSLW() {
+function toggleSL() {
     var x = document.getElementById("list-containerSL");
-    var y = document.getElementById("rowSL");
+    var y = document.getElementsByClassName("rowSL");
     x.classList.toggle('active');
-    y.classList.toggle('active')
+    y[0].classList.toggle('active');
+    y[1].classList.toggle('active')
 }
 
-const tabName = document.getElementById("tabName");
-const daily = document.getElementById("dailyTab")
-if (tabName.innerHTML === "Daily") {
-    daily.style.borderBottom = "0px solid white";
-    daily.style.backgroundColor = "white"
-}
+
+
 
 
 
 
 const inputBoxBFA = document.getElementById("input-boxBFA")
-const listContainerBFAW = document.getElementById("list-containerBFA")
+const listContainerBFA = document.getElementById("list-containerBFA")
+const inputCatBFA = document.getElementById("input-catagoryBFA")
 
-function addTaskBFAW() {
+function addTaskBFA() {
     if(inputBoxBFA.value === '') {
         alert ("You must write something!");
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxBFA.value;
-        listContainerBFAW.appendChild(li);
+        li.classList.add("task");
+        listContainerBFA.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
@@ -106,7 +140,22 @@ function addTaskBFAW() {
     saveData();
 }
 
-listContainerBFAW.addEventListener("click", function(e) {
+function addCatagorySL() {
+    if(inputCatSL.value === '') {
+        alert ("You must write something!");
+    } else {
+        let header = document.createElement("h5");
+        header.innerHTML = inputCatSL.value;
+        listContainerSL.appendChild(header);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7"
+        header.appendChild(span);
+    }
+    inputCatSL.value = "";  
+    saveData();
+}
+
+listContainerBFA.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
@@ -118,26 +167,29 @@ listContainerBFAW.addEventListener("click", function(e) {
 
 
 
-function toggleBFAW() {
+function toggleBFA() {
     var x = document.getElementById("list-containerBFA");
-    var y = document.getElementById("rowBFA");
+    var y = document.getElementsByClassName("rowBFA");
     x.classList.toggle('active');
-    y.classList.toggle('active')
+    y[0].classList.toggle('active');
+    y[1].classList.toggle('active')
 }
 
 
 
 
 const inputBoxL = document.getElementById("input-boxL")
-const listContainerLW = document.getElementById("list-containerL")
+const listContainerL = document.getElementById("list-containerL")
+const inputCatL = document.getElementById("input-catagoryL")
 
-function addTaskLW() {
+function addTaskL() {
     if(inputBoxL.value === '') {
         alert ("You must write something!");
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxL.value;
-        listContainerLW.appendChild(li);
+        li.classList.add("task");
+        listContainerL.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
@@ -146,7 +198,22 @@ function addTaskLW() {
     saveData();
 }
 
-listContainerLW.addEventListener("click", function(e) {
+function addCatagoryL() {
+    if(inputCatL.value === '') {
+        alert ("You must write something!");
+    } else {
+        let header = document.createElement("h5");
+        header.innerHTML = inputCatL.value;
+        listContainerL.appendChild(header);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7"
+        header.appendChild(span);
+    }
+    inputCatL.value = "";  
+    saveData();
+}
+
+listContainerL.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
@@ -158,11 +225,12 @@ listContainerLW.addEventListener("click", function(e) {
 
 
 
-function toggleLW() {
+function toggleL() {
     var x = document.getElementById("list-containerL");
-    var y = document.getElementById("rowL");
+    var y = document.getElementsByClassName("rowL");
     x.classList.toggle('active');
-    y.classList.toggle('active')
+    y[0].classList.toggle('active');
+    y[1].classList.toggle('active')
 }
 
 
@@ -175,15 +243,17 @@ function toggleLW() {
 
 
 const inputBoxWOD = document.getElementById("input-boxWOD")
-const listContainerWODW = document.getElementById("list-containerWOD")
+const listContainerWOD = document.getElementById("list-containerWOD")
+const inputCatWOD = document.getElementById("input-catagoryWOD")
 
-function addTaskWODW() {
+function addTaskWOD() {
     if(inputBoxWOD.value === '') {
         alert ("You must write something!");
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxWOD.value;
-        listContainerWODW.appendChild(li);
+        li.classList.add("task");
+        listContainerWOD.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
@@ -192,7 +262,22 @@ function addTaskWODW() {
     saveData();
 }
 
-listContainerWODW.addEventListener("click", function(e) {
+function addCatagoryWOD() {
+    if(inputCatWOD.value === '') {
+        alert ("You must write something!");
+    } else {
+        let header = document.createElement("h5");
+        header.innerHTML = inputCatWOD.value;
+        listContainerWOD.appendChild(header);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7"
+        header.appendChild(span);
+    }
+    inputCatWOD.value = "";  
+    saveData();
+}
+
+listContainerWOD.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
@@ -204,11 +289,12 @@ listContainerWODW.addEventListener("click", function(e) {
 
 
 
-function toggleWODW() {
+function toggleWOD() {
     var x = document.getElementById("list-containerWOD");
-    var y = document.getElementById("rowWOD");
+    var y = document.getElementsByClassName("rowWOD");
     x.classList.toggle('active');
-    y.classList.toggle('active')
+    y[0].classList.toggle('active');
+    y[1].classList.toggle('active')
 }
 
 
@@ -222,15 +308,17 @@ function toggleWODW() {
 
 
 const inputBoxMOP = document.getElementById("input-boxMOP")
-const listContainerMOPW = document.getElementById("list-containerMOP")
+const listContainerMOP = document.getElementById("list-containerMOP")
+const inputCatMOP = document.getElementById("input-catagoryMOP")
 
-function addTaskMOPW() {
+function addTaskMOP() {
     if(inputBoxMOP.value === '') {
         alert ("You must write something!");
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxMOP.value;
-        listContainerMOPW.appendChild(li);
+        li.classList.add("task");
+        listContainerMOP.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
@@ -239,7 +327,22 @@ function addTaskMOPW() {
     saveData();
 }
 
-listContainerMOPW.addEventListener("click", function(e) {
+function addCatagoryMOP() {
+    if(inputCatMOP.value === '') {
+        alert ("You must write something!");
+    } else {
+        let header = document.createElement("h5");
+        header.innerHTML = inputCatMOP.value;
+        listContainerMOP.appendChild(header);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7"
+        header.appendChild(span);
+    }
+    inputCatMOP.value = "";  
+    saveData();
+}
+
+listContainerMOP.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
@@ -251,11 +354,12 @@ listContainerMOPW.addEventListener("click", function(e) {
 
 
 
-function toggleMOPW() {
+function toggleMOP() {
     var x = document.getElementById("list-containerMOP");
-    var y = document.getElementById("rowMOP");
+    var y = document.getElementsByClassName("rowMOP");
     x.classList.toggle('active');
-    y.classList.toggle('active')
+    y[0].classList.toggle('active');
+    y[1].classList.toggle('active')
 }
 
 
@@ -272,15 +376,17 @@ function toggleMOPW() {
 
 
 const inputBoxC = document.getElementById("input-boxC")
-const listContainerCW = document.getElementById("list-containerC")
+const listContainerC = document.getElementById("list-containerC")
+const inputCatC = document.getElementById("input-catagoryC")
 
-function addTaskCW() {
+function addTaskC() {
     if(inputBoxC.value === '') {
         alert ("You must write something!");
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxC.value;
-        listContainerCW.appendChild(li);
+        li.classList.add("task");
+        listContainerC.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
@@ -289,7 +395,22 @@ function addTaskCW() {
     saveData();
 }
 
-listContainerCW.addEventListener("click", function(e) {
+function addCatagoryC() {
+    if(inputCatC.value === '') {
+        alert ("You must write something!");
+    } else {
+        let header = document.createElement("h5");
+        header.innerHTML = inputCatC.value;
+        listContainerC.appendChild(header);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7"
+        header.appendChild(span);
+    }
+    inputCatC.value = "";  
+    saveData();
+}
+
+listContainerC.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
@@ -301,11 +422,12 @@ listContainerCW.addEventListener("click", function(e) {
 
 
 
-function toggleCW() {
+function toggleC() {
     var x = document.getElementById("list-containerC");
-    var y = document.getElementById("rowC");
+    var y = document.getElementsByClassName("rowC");
     x.classList.toggle('active');
-    y.classList.toggle('active')
+    y[0].classList.toggle('active');
+    y[1].classList.toggle('active')
 }
 
 
@@ -327,15 +449,17 @@ function toggleCW() {
 
 
 const inputBoxWOTLK = document.getElementById("input-boxWOTLK")
-const listContainerWOTLKW = document.getElementById("list-containerWOTLK")
+const listContainerWOTLK = document.getElementById("list-containerWOTLK")
+const inputCatWOTLK = document.getElementById("input-catagoryWOTLK")
 
-function addTaskWOTLKW() {
+function addTaskWOTLK() {
     if(inputBoxWOTLK.value === '') {
         alert ("You must write something!");
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxWOTLK.value;
-        listContainerWOTLKW.appendChild(li);
+        li.classList.add("task");
+        listContainerWOTLK.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
@@ -344,7 +468,22 @@ function addTaskWOTLKW() {
     saveData();
 }
 
-listContainerWOTLKW.addEventListener("click", function(e) {
+function addCatagoryWOTLK() {
+    if(inputCatWOTLK.value === '') {
+        alert ("You must write something!");
+    } else {
+        let header = document.createElement("h5");
+        header.innerHTML = inputCatWOTLK.value;
+        listContainerWOTLK.appendChild(header);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7"
+        header.appendChild(span);
+    }
+    inputCatWOTLK.value = "";  
+    saveData();
+}
+
+listContainerWOTLK.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
@@ -356,11 +495,12 @@ listContainerWOTLKW.addEventListener("click", function(e) {
 
 
 
-function toggleWOTLKW() {
+function toggleWOTLK() {
     var x = document.getElementById("list-containerWOTLK");
-    var y = document.getElementById("rowWOTLK");
+    var y = document.getElementsByClassName("rowWOTLK");
     x.classList.toggle('active');
-    y.classList.toggle('active')
+    y[0].classList.toggle('active');
+    y[1].classList.toggle('active')
 }
 
 
@@ -387,15 +527,17 @@ function toggleWOTLKW() {
 
 
 const inputBoxBC = document.getElementById("input-boxBC")
-const listContainerBCW = document.getElementById("list-containerBC")
+const listContainerBC = document.getElementById("list-containerBC")
+const inputCatBC = document.getElementById("input-catagoryBC")
 
-function addTaskBCW() {
+function addTaskBC() {
     if(inputBoxBC.value === '') {
         alert ("You must write something!");
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxBC.value;
-        listContainerBCW.appendChild(li);
+        li.classList.add("task");
+        listContainerBC.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
@@ -404,7 +546,22 @@ function addTaskBCW() {
     saveData();
 }
 
-listContainerBCW.addEventListener("click", function(e) {
+function addCatagoryBC() {
+    if(inputCatBC.value === '') {
+        alert ("You must write something!");
+    } else {
+        let header = document.createElement("h5");
+        header.innerHTML = inputCatBC.value;
+        listContainerBC.appendChild(header);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7"
+        header.appendChild(span);
+    }
+    inputCatBC.value = "";  
+    saveData();
+}
+
+listContainerBC.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
@@ -416,11 +573,12 @@ listContainerBCW.addEventListener("click", function(e) {
 
 
 
-function toggleBCW() {
+function toggleBC() {
     var x = document.getElementById("list-containerBC");
-    var y = document.getElementById("rowBC");
+    var y = document.getElementsByClassName("rowBC");
     x.classList.toggle('active');
-    y.classList.toggle('active')
+    y[0].classList.toggle('active');
+    y[1].classList.toggle('active')
 }
 
 
@@ -442,15 +600,17 @@ function toggleBCW() {
 
 
 const inputBoxClassic = document.getElementById("input-boxClassic")
-const listContainerClassicW = document.getElementById("list-containerClassic")
+const listContainerClassic = document.getElementById("list-containerClassic")
+const inputCatClassic = document.getElementById("input-catagoryClassic")
 
-function addTaskClassicW() {
+function addTaskClassic() {
     if(inputBoxClassic.value === '') {
         alert ("You must write something!");
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBoxClassic.value;
-        listContainerClassicW.appendChild(li);
+        li.classList.add("task");
+        listContainerClassic.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
         li.appendChild(span);
@@ -459,7 +619,22 @@ function addTaskClassicW() {
     saveData();
 }
 
-listContainerClassicW.addEventListener("click", function(e) {
+function addCatagoryClassic() {
+    if(inputCatClassic.value === '') {
+        alert ("You must write something!");
+    } else {
+        let header = document.createElement("h5");
+        header.innerHTML = inputCatClassic.value;
+        listContainerClassic.appendChild(header);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7"
+        header.appendChild(span);
+    }
+    inputCatClassic.value = "";  
+    saveData();
+}
+
+listContainerClassic.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
@@ -471,112 +646,183 @@ listContainerClassicW.addEventListener("click", function(e) {
 
 
 
-function toggleClassicW() {
+function toggleClassic() {
     var x = document.getElementById("list-containerClassic");
-    var y = document.getElementById("rowClassic");
+    var y = document.getElementsByClassName("rowClassic");
     x.classList.toggle('active');
-    y.classList.toggle('active')
+    y[0].classList.toggle('active');
+    y[1].classList.toggle('active')
 }
 
 
 
 
 function saveData() {
-    localStorage.setItem("dataW1", listContainerSLW.innerHTML);
-    localStorage.setItem("dataW2", listContainerBFAW.innerHTML);
-    localStorage.setItem("dataW3", listContainerLW.innerHTML);
-    localStorage.setItem("dataW4", listContainerWODW.innerHTML);
-    localStorage.setItem("dataW5", listContainerMOPW.innerHTML);
-    localStorage.setItem("dataW6", listContainerCW.innerHTML);
-    localStorage.setItem("dataW7", listContainerWOTLKW.innerHTML);
-    localStorage.setItem("dataW8", listContainerBCW.innerHTML);
-    localStorage.setItem("dataW9", listContainerClassicW.innerHTML);
-
     localStorage.setItem("dataW", listContainerDFW.innerHTML);
+    localStorage.setItem("dataW1", listContainerSL.innerHTML);
+    localStorage.setItem("dataW2", listContainerBFA.innerHTML);
+    localStorage.setItem("dataW3", listContainerL.innerHTML);
+    localStorage.setItem("dataW4", listContainerWOD.innerHTML);
+    localStorage.setItem("dataW5", listContainerMOP.innerHTML);
+    localStorage.setItem("dataW6", listContainerC.innerHTML);
+    localStorage.setItem("dataW7", listContainerWOTLK.innerHTML);
+    localStorage.setItem("dataW8", listContainerBC.innerHTML);
+    localStorage.setItem("dataW9", listContainerClassic.innerHTML);
 }
 
 function showTask(){
-    listContainerSLW.innerHTML = localStorage.getItem("dataW1");
-    listContainerBFAW.innerHTML = localStorage.getItem("dataW2");
-    listContainerLW.innerHTML = localStorage.getItem("dataW3");
-    listContainerWODW.innerHTML = localStorage.getItem("dataW4");
-    listContainerMOPW.innerHTML = localStorage.getItem("dataW5");
-    listContainerCW.innerHTML = localStorage.getItem("dataW6");
-    listContainerWOTLKW.innerHTML = localStorage.getItem("dataW7");
-    listContainerBCW.innerHTML = localStorage.getItem("dataW8");
-    listContainerClassicW.innerHTML = localStorage.getItem("dataW9");
-
     listContainerDFW.innerHTML = localStorage.getItem("dataW");
+    listContainerSL.innerHTML = localStorage.getItem("dataW1");
+    listContainerBFA.innerHTML = localStorage.getItem("dataW2");
+    listContainerL.innerHTML = localStorage.getItem("dataW3");
+    listContainerWOD.innerHTML = localStorage.getItem("dataW4");
+    listContainerMOP.innerHTML = localStorage.getItem("dataW5");
+    listContainerC.innerHTML = localStorage.getItem("dataW6");
+    listContainerWOTLK.innerHTML = localStorage.getItem("dataW7");
+    listContainerBC.innerHTML = localStorage.getItem("dataW8");
+    listContainerClassic.innerHTML = localStorage.getItem("dataW9");
 }
 
 
 var input = document.getElementById("input-boxDF");
 input.addEventListener("keypress", function(e) {
     if(e.key === "Enter") {
-        addTaskDFW();
+        addTaskDF();
     }
 });
 
 var input2 = document.getElementById("input-boxSL");
 input2.addEventListener("keypress", function(e) {
     if(e.key === "Enter") {
-        addTaskSLW();
+        addTaskSL();
     }
 });
 
 var input3 = document.getElementById("input-boxBFA");
 input3.addEventListener("keypress", function(e) {
     if(e.key === "Enter") {
-        addTaskBFAW();
+        addTaskBFA();
     }
 });
 
 var input4 = document.getElementById("input-boxL");
 input4.addEventListener("keypress", function(e) {
     if(e.key === "Enter") {
-        addTaskLW();
+        addTaskL();
     }
 });
 
 var input5 = document.getElementById("input-boxWOD");
 input5.addEventListener("keypress", function(e) {
     if(e.key === "Enter") {
-        addTaskWODW();
+        addTaskWOD();
     }
 });
 
 var input6 = document.getElementById("input-boxMOP");
 input6.addEventListener("keypress", function(e) {
     if(e.key === "Enter") {
-        addTaskMOPW();
+        addTaskMOP();
     }
 });
 
 var input7 = document.getElementById("input-boxC");
 input7.addEventListener("keypress", function(e) {
     if(e.key === "Enter") {
-        addTaskCW();
+        addTaskC();
     }
 });
 
 var input8 = document.getElementById("input-boxWOTLK");
 input8.addEventListener("keypress", function(e) {
     if(e.key === "Enter") {
-        addTaskWOTLKW();
+        addTaskWOTLK();
     }
 });
 
 var input9 = document.getElementById("input-boxBC");
 input9.addEventListener("keypress", function(e) {
     if(e.key === "Enter") {
-        addTaskBCW();
+        addTaskBC();
     }
 });
 
 var input10 = document.getElementById("input-boxClassic");
 input10.addEventListener("keypress", function(e) {
     if(e.key === "Enter") {
-        addTaskClassicW();
+        addTaskClassic();
+    }
+});
+
+
+
+var inputC = document.getElementById("input-catagoryDF");
+inputC.addEventListener("keypress", function(e) {
+    if(e.key === "Enter") {
+        addCatagoryDF();
+    }
+});
+
+var inputC1 = document.getElementById("input-catagorySL");
+inputC1.addEventListener("keypress", function(e) {
+    if(e.key === "Enter") {
+        addCatagorySL();
+    }
+});
+
+var inputC2 = document.getElementById("input-catagoryBFA");
+inputC2.addEventListener("keypress", function(e) {
+    if(e.key === "Enter") {
+        addCatagoryBFA();
+    }
+});
+
+var inputC3 = document.getElementById("input-catagoryL");
+inputC3.addEventListener("keypress", function(e) {
+    if(e.key === "Enter") {
+        addCatagoryL();
+    }
+});
+
+var inputC4 = document.getElementById("input-catagoryWOD");
+inputC4.addEventListener("keypress", function(e) {
+    if(e.key === "Enter") {
+        addCatagoryWOD();
+    }
+});
+
+var inputC5 = document.getElementById("input-catagoryMOP");
+inputC5.addEventListener("keypress", function(e) {
+    if(e.key === "Enter") {
+        addCatagoryMOP();
+    }
+});
+
+var inputC6 = document.getElementById("input-catagoryC");
+inputC6.addEventListener("keypress", function(e) {
+    if(e.key === "Enter") {
+        addCatagoryC();
+    }
+});
+
+var inputC7 = document.getElementById("input-catagoryWOTLK");
+inputC7.addEventListener("keypress", function(e) {
+    if(e.key === "Enter") {
+        addCatagoryWOTLK();
+    }
+});
+
+var inputC8 = document.getElementById("input-catagoryBC");
+inputC8.addEventListener("keypress", function(e) {
+    if(e.key === "Enter") {
+        addCatagoryBC();
+    }
+});
+
+var inputC9 = document.getElementById("input-catagoryClassic");
+inputC9.addEventListener("keypress", function(e) {
+    if(e.key === "Enter") {
+        addCatagoryClassic();
     }
 });
 
@@ -584,8 +830,18 @@ input10.addEventListener("keypress", function(e) {
 
 
 
-
 setInterval(getListElements, 1000)
+setInterval(getTasks, 100)
+
+function getTasks() {
+    var tasks = document.getElementsByClassName("task");
+    var taskAmount = document.getElementById("taskAmount");
+    var checked = document.getElementsByClassName("checked")
+    
+
+    taskAmount.innerHTML = checked.length + " / " + tasks.length;
+}
+
 
 
 
@@ -595,50 +851,100 @@ function getListElements(){
     li[x].onmousedown = pickItem;
     li[x].onmouseover = moveItem;
   }
-  var lo = listContainerSLW.getElementsByTagName("li");
+  var lo = listContainerSL.getElementsByTagName("li");
   for (let y = 0; y < lo.length; y++) {
     lo[y].onmousedown = pickItem;
     lo[y].onmouseover = moveItem;
   }
-  var le = listContainerBFAW.getElementsByTagName("li");
+  var le = listContainerBFA.getElementsByTagName("li");
   for (let z = 0; z < le.length; z++) {
     le[z].onmousedown = pickItem;
     le[z].onmouseover = moveItem;
   }
-  var L = listContainerLW.getElementsByTagName("li");
+  var L = listContainerL.getElementsByTagName("li");
   for (let l = 0; l < L.length; l++) {
     L[l].onmousedown = pickItem;
     L[l].onmouseover = moveItem;
   }
-  var wod = listContainerWODW.getElementsByTagName("li");
+  var wod = listContainerWOD.getElementsByTagName("li");
   for (let w = 0; w < wod.length; w++) {
     wod[w].onmousedown = pickItem;
     wod[w].onmouseover = moveItem;
   }
-  var mop = listContainerMOPW.getElementsByTagName("li");
+  var mop = listContainerMOP.getElementsByTagName("li");
   for (let m = 0; m < mop.length; m++) {
     mop[m].onmousedown = pickItem;
     mop[m].onmouseover = moveItem;
   }
-  var c = listContainerCW.getElementsByTagName("li");
+  var c = listContainerC.getElementsByTagName("li");
   for (let u = 0; u < c.length; u++) {
     c[u].onmousedown = pickItem;
     c[u].onmouseover = moveItem;
   }
-  var wotlk = listContainerWOTLKW.getElementsByTagName("li");
+  var wotlk = listContainerWOTLK.getElementsByTagName("li");
   for (let o = 0; o < wotlk.length; o++) {
     wotlk[o].onmousedown = pickItem;
     wotlk[o].onmouseover = moveItem;
   }
-  var bc = listContainerBCW.getElementsByTagName("li");
+  var bc = listContainerBC.getElementsByTagName("li");
   for (let t = 0; t < bc.length; t++) {
     bc[t].onmousedown = pickItem;
     bc[t].onmouseover = moveItem;
   }
-  var classic = listContainerClassicW.getElementsByTagName("li");
+  var classic = listContainerClassic.getElementsByTagName("li");
   for (let classi = 0; classi < classic.length; classi++) {
     classic[classi].onmousedown = pickItem;
     classic[classi].onmouseover = moveItem;
+  }
+  var h5 = listContainerDFW.getElementsByTagName("h5");
+  for (let x = 0; x < h5.length; x++) {
+    h5[x].onmousedown = pickItem;
+    h5[x].onmouseover = moveItem;
+  }
+  var h5 = listContainerSL.getElementsByTagName("h5");
+  for (let x = 0; x < h5.length; x++) {
+    h5[x].onmousedown = pickItem;
+    h5[x].onmouseover = moveItem;
+  }
+  var h5 = listContainerBFA.getElementsByTagName("h5");
+  for (let x = 0; x < h5.length; x++) {
+    h5[x].onmousedown = pickItem;
+    h5[x].onmouseover = moveItem;
+  }
+  var h5 = listContainerL.getElementsByTagName("h5");
+  for (let x = 0; x < h5.length; x++) {
+    h5[x].onmousedown = pickItem;
+    h5[x].onmouseover = moveItem;
+  }
+  var h5 = listContainerWOD.getElementsByTagName("h5");
+  for (let x = 0; x < h5.length; x++) {
+    h5[x].onmousedown = pickItem;
+    h5[x].onmouseover = moveItem;
+  }
+  var h5 = listContainerMOP.getElementsByTagName("h5");
+  for (let x = 0; x < h5.length; x++) {
+    h5[x].onmousedown = pickItem;
+    h5[x].onmouseover = moveItem;
+  }
+  var h5 = listContainerC.getElementsByTagName("h5");
+  for (let x = 0; x < h5.length; x++) {
+    h5[x].onmousedown = pickItem;
+    h5[x].onmouseover = moveItem;
+  }
+  var h5 = listContainerWOTLK.getElementsByTagName("h5");
+  for (let x = 0; x < h5.length; x++) {
+    h5[x].onmousedown = pickItem;
+    h5[x].onmouseover = moveItem;
+  }
+  var h5 = listContainerBC.getElementsByTagName("h5");
+  for (let x = 0; x < h5.length; x++) {
+    h5[x].onmousedown = pickItem;
+    h5[x].onmouseover = moveItem;
+  }
+  var h5 = listContainerClassic.getElementsByTagName("h5");
+  for (let x = 0; x < h5.length; x++) {
+    h5[x].onmousedown = pickItem;
+    h5[x].onmouseover = moveItem;
   }
 }
 
@@ -688,3 +994,16 @@ function dropItem () {
   document.removeEventListener("onmouseup", dropItem)
 }
 showTask();
+
+
+var date = new Date();
+console.log(date.getDay());
+console.log(date.getHours());
+if(date.getDay() === 3 && date.getHours() >= 3) {
+    var tasks = document.getElementsByClassName("task");
+
+    for(i = 0; i < tasks.length; i++) {
+        tasks[i].classList.remove("checked");
+    }
+    saveData();
+}

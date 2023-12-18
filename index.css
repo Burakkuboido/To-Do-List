@@ -9,6 +9,12 @@ body {
   background: linear-gradient(225deg, #153677, #4e085f);
 }
 
+#taskAmount {
+  text-align: center;
+  font-weight: bolder;
+  color: #002765;
+}
+
 .container {
   width: 100%;
   min-height: 100vh;
@@ -51,25 +57,23 @@ body {
   margin-left: 10px;
 }
 
-#rowDF,
-#rowSL,
-#rowBFA,
-#rowL,
-#rowWOD,
-#rowMOP,
-#rowC,
-#rowWOTLK,
-#rowBC,
-#rowClassic {
+
+
+.rowDF,
+.rowSL,
+.rowBFA,
+.rowL,
+.rowWOD,
+.rowMOP,
+.rowC,
+.rowWOTLK,
+.rowBC,
+.rowClassic {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #edeef0;
   border-radius: 30px;
-  padding-left: 20px;
-  margin-bottom: 0;
-  margin-left: 2em;
-  margin-right: 2em;
   border: 2px solid #492d8f;
 }
 
@@ -78,18 +82,21 @@ input {
   border: none;
   outline: none;
   background: transparent;
-  padding: 10px;
+  margin-left: 1em;
 }
 
-.addTask {
+.addTask,
+.addCatagory {
   border: none;
   outline: none;
-  padding: 16px 50px;
+  padding: 16px 10px;
   background: #492d8f;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
   border-radius: 40px;
+  width: 5em;
+  height: 3em;
 }
 
 ol > li > a {
@@ -118,6 +125,24 @@ ul li {
   position: relative;
 }
 
+ul h5 {
+  list-style: none;
+  padding-bottom: 1em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  
+  cursor: pointer;
+  position: relative;
+}
+
+h5 {
+  text-align: center;
+  font-size: 28px;
+  color: #492d8f;
+  font-weight: bolder;
+}
+
 ul li::before {
   content: "";
   position: absolute;
@@ -131,6 +156,16 @@ ul li::before {
   left: 8px;
 }
 
+ul h5::before {
+content: "";
+position: absolute;
+height: 28px;
+width: 28px;
+border-radius: 50%;
+top: 8px;
+left: 8px;
+}
+
 ul li.checked {
   color: #555;
   text-decoration: line-through;
@@ -140,7 +175,8 @@ ul li.checked::before {
   background-image: url(images/face-smile-solid.svg);
 }
 
-ul li span {
+ul li span,
+ul > h5 > span {
   position: absolute;
   right: 0;
   top: 5px;
@@ -154,7 +190,8 @@ ul li span {
   
 }
 
-ul li span:hover {
+ul li span:hover,
+ul > h5 > span:hover {
   background: #edeef0;
 }
 
@@ -192,6 +229,32 @@ h1 {
   font-size: 22px;
 }
 
+.split {
+  display: flex;
+flex-direction: row;
+}
+
+#show {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.5em;
+}
+
+#show > p {
+  cursor: pointer;
+  color: #492d8f;
+  font-weight: bold;
+}
+
+#show > p:hover {
+  color: rgb(163, 110, 221);
+}
+
+#show.active{
+  display: flex;
+}
+
 #list-containerDF,
 #list-containerSL,
 #list-containerBFA,
@@ -202,18 +265,19 @@ h1 {
 #list-containerWOTLK,
 #list-containerBC,
 #list-containerClassic,
-#rowDF,
-#rowSL,
-#rowBFA,
-#rowL,
-#rowWOD,
-#rowMOP,
-#rowC,
-#rowWOTLK,
-#rowBC,
-#rowClassic {
+.rowDF,
+.rowSL,
+.rowBFA,
+.rowL,
+.rowWOD,
+.rowMOP,
+.rowC,
+.rowWOTLK,
+.rowBC,
+.rowClassic {
   display: none;
   margin-bottom: 20px;
+  margin-left: 5px;
 }
 
 #list-containerDF.active,
@@ -230,16 +294,16 @@ h1 {
   display: block;
 }
 
-#rowDF.active,
-#rowSL.active,
-#rowBFA.active,
-#rowL.active,
-#rowWOD.active,
-#rowMOP.active,
-#rowC.active,
-#rowWOTLK.active,
-#rowBC.active,
-#rowClassic.active {
+.rowDF.active,
+.rowSL.active,
+.rowBFA.active,
+.rowL.active,
+.rowWOD.active,
+.rowMOP.active,
+.rowC.active,
+.rowWOTLK.active,
+.rowBC.active,
+.rowClassic.active {
   height: auto;
   display: flex;
 }

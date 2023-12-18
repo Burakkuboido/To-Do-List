@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/To-Do-List/index.css">
+    <link rel="stylesheet" href="/index.css">
     <title>To-Do List</title>
 </head>
 <body>
@@ -21,14 +21,21 @@
         <div class="todo-app">
             <div>
                 <h1 id="tabName">Weekly</h1>
+                <p id="taskAmount"></p>
                 <div class="items">
                     <h2>Dragonflight</h2>
-                    <button onclick="toggleDFW()" class="fa fa-arrow-down submit"></button>
+                    <button onclick="toggleDF()" class="fa fa-arrow-down submit"></button>
                 </div>
             </div>
-            <div id="rowDF">
-                <input type="text" id="input-boxDF" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskDFW()">Add</button>
+            <div class="split">
+                <div class="rowDF">
+                    <input type="text" id="input-catagoryDF" placeholder="Add Your Catagory">
+                    <button class="addCatagory" onclick="addCatagoryDF()">Catagory</button>
+                </div>
+                <div class="rowDF">
+                    <input type="text" id="input-boxDF" placeholder="Add Your Task">
+                    <button class="addTask" onclick="addTaskDF()">Task</button>
+                </div>
             </div>
             <ul id="list-containerDF">
                 <!-- <li class="checked">Test 1</li>
@@ -40,11 +47,17 @@
 
             <div class="items">
                 <h2>Shadowlands</h2>
-                <button onclick="toggleSLW()" class="fa fa-arrow-down"></button>
+                <button onclick="toggleSL()" class="fa fa-arrow-down"></button>
             </div>
-            <div id="rowSL">
-                <input type="text" id="input-boxSL" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskSLW()">Add</button>
+            <div class="split">
+                <div class="rowSL">
+                    <input type="text" id="input-catagorySL" placeholder="Add Your Catagory">
+                    <button class="addCatagory" onclick="addCatagorySL()">Catagory</button>
+                </div>
+                <div class="rowSL">
+                    <input type="text" id="input-boxSL" placeholder="Add Your Task">
+                    <button class="addTask" onclick="addTaskSL()">Task</button>
+                </div>
             </div>
             <ul id="list-containerSL">
                 <!-- <li class="checked">Test 1</li>
@@ -56,11 +69,17 @@
 
             <div class="items">
                 <h2>Battle for Azeroth</h2>
-                <button onclick="toggleBFAW()" class="fa fa-arrow-down"></button>
+                <button onclick="toggleBFA()" class="fa fa-arrow-down"></button>
             </div>
-            <div id="rowBFA">
-                <input type="text" id="input-boxBFA" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskBFAW()">Add</button>
+            <div class="split">
+                <div class="rowBFA">
+                    <input type="text" id="input-catagoryBFA" placeholder="Add Your Catagory">
+                    <button class="addTask" onclick="addCatagoryBFA()">Catagory</button>
+                </div>
+                <div class="rowBFA">
+                    <input type="text" id="input-boxBFA" placeholder="Add Your Task">
+                    <button class="addTask" onclick="addTaskBFA()">Task</button>
+                </div>
             </div>
             <ul id="list-containerBFA">
                 <!-- <li class="checked">Test 1</li>
@@ -72,11 +91,17 @@
 
             <div class="items">
                 <h2>Legion</h2>
-                <button onclick="toggleLW()" class="fa fa-arrow-down"></button>
+                <button onclick="toggleL()" class="fa fa-arrow-down"></button>
             </div>
-            <div id="rowL">
-                <input type="text" id="input-boxL" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskLW()">Add</button>
+            <div class="split">
+            <div class="rowL">
+                <input type="text" id="input-catagoryL" placeholder="Add Your Catagory">
+                <button class="addTask" onclick="addCatagoryL()">Catagory</button>
+            </div>
+            <div class="rowL">
+                <input type="text" id="input-boxL" placeholder="Add Your Task">
+                <button class="addTask" onclick="addTaskL()">Task</button>
+            </div>
             </div>
             <ul id="list-containerL">
                 <!-- <li class="checked">Test 1</li>
@@ -88,11 +113,17 @@
 
             <div class="items">
                 <h2>Warlords of Draenor</h2>
-                <button onclick="toggleWODW()" class="fa fa-arrow-down"></button>
+                <button onclick="toggleWOD()" class="fa fa-arrow-down"></button>
             </div>
-            <div id="rowWOD">
-                <input type="text" id="input-boxWOD" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskWODW()">Add</button>
+            <div class="split">
+                <div class="rowWOD">
+                    <input type="text" id="input-catagoryWOD" placeholder="Add Your Catagory">
+                    <button class="addTask" onclick="addCatagoryL()">Catagory</button>
+                </div>
+                <div class="rowWOD">
+                    <input type="text" id="input-boxWOD" placeholder="Add Your Task">
+                    <button class="addTask" onclick="addTaskWOD()">Task</button>
+                </div>
             </div>
             <ul id="list-containerWOD">
                 <!-- <li class="checked">Test 1</li>
@@ -104,11 +135,17 @@
 
             <div class="items">
                 <h2>Mists of Pandaria</h2>
-                <button onclick="toggleMOPW()" class="fa fa-arrow-down"></button>
+                <button onclick="toggleMOP()" class="fa fa-arrow-down"></button>
             </div>
-            <div id="rowMOP">
-                <input type="text" id="input-boxMOP" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskMOPW()">Add</button>
+            <div class="split">
+                <div class="rowMOP">
+                    <input type="text" id="input-catagoryMOP" placeholder="Add Your Catagory">
+                    <button class="addTask" onclick="addCatagoryMOP()">Catagory</button>
+                </div>
+                <div class="rowMOP">
+                    <input type="text" id="input-boxMOP" placeholder="Add Your Task">
+                    <button class="addTask" onclick="addTaskMOP()">Task</button>
+                </div>
             </div>
             <ul id="list-containerMOP">
                 <!-- <li class="checked">Test 1</li>
@@ -120,11 +157,17 @@
 
             <div class="items">
                 <h2>Cataclysm</h2>
-                <button onclick="toggleCW()" class="fa fa-arrow-down"></button>
+                <button onclick="toggleC()" class="fa fa-arrow-down"></button>
             </div>
-            <div id="rowC">
-                <input type="text" id="input-boxC" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskCW()">Add</button>
+            <div class="split">
+                <div class="rowC">
+                    <input type="text" id="input-catagoryC" placeholder="Add Your Catagory">
+                    <button class="addTask" onclick="addCatagoryC()">Catagory</button>
+                </div>
+                <div class="rowC">
+                    <input type="text" id="input-boxC" placeholder="Add Your Task">
+                    <button class="addTask" onclick="addTaskC()">Task</button>
+                </div>
             </div>
             <ul id="list-containerC">
                 <!-- <li class="checked">Test 1</li>
@@ -136,12 +179,19 @@
 
             <div class="items">
                 <h2>Wrath of the Lich King</h2>
-                <button onclick="toggleWOTLKW()" class="fa fa-arrow-down"></button>
+                <button onclick="toggleWOTLK()" class="fa fa-arrow-down"></button>
             </div>
-            <div id="rowWOTLK">
-                <input type="text" id="input-boxWOTLK" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskWOTLKW()">Add</button>
+            <div class="split">
+                <div class="rowWOTLK">
+                    <input type="text" id="input-catagoryWOTLK" placeholder="Add Your Catagory">
+                    <button class="addTask" onclick="addCatagoryWOTLK()">Catagory</button>
+                </div>
+                <div class="rowWOTLK">
+                    <input type="text" id="input-boxWOTLK" placeholder="Add Your Task">
+                    <button class="addTask" onclick="addTaskWOTLK()">Task</button>
+                </div>
             </div>
+
             <ul id="list-containerWOTLK">
                 <!-- <li class="checked">Test 1</li>
                 <li>Test 2</li>
@@ -152,11 +202,17 @@
 
             <div class="items">
                 <h2>Burning Crusade</h2>
-                <button onclick="toggleBCW()" class="fa fa-arrow-down"></button>
+                <button onclick="toggleBC()" class="fa fa-arrow-down"></button>
             </div>
-            <div id="rowBC">
-                <input type="text" id="input-boxBC" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskBCW()">Add</button>
+            <div class="split">
+                <div class="rowBC">
+                    <input type="text" id="input-catagoryBC" placeholder="Add Your Catagory">
+                    <button class="addTask" onclick="addCatagoryBC()">Catagory</button>
+                </div>
+                <div class="rowBC">
+                    <input type="text" id="input-boxBC" placeholder="Add Your Task">
+                    <button class="addTask" onclick="addTaskBC()">Task</button>
+                </div>
             </div>
             <ul id="list-containerBC">
                 <!-- <li class="checked">Test 1</li>
@@ -168,11 +224,17 @@
 
             <div class="items">
                 <h2>Classic</h2>
-                <button onclick="toggleClassicW()" class="fa fa-arrow-down"></button>
+                <button onclick="toggleClassic()" class="fa fa-arrow-down"></button>
             </div>
-            <div id="rowClassic">
-                <input type="text" id="input-boxClassic" placeholder="Add Your Text">
-                <button class="addTask" onclick="addTaskClassicW()">Add</button>
+            <div class="split">
+                <div class="rowClassic">
+                    <input type="text" id="input-catagoryClassic" placeholder="Add Your Catagory">
+                    <button class="addTask" onclick="addCatagoryClassic()">Catagory</button>
+                </div>
+                <div class="rowClassic">
+                    <input type="text" id="input-boxClassic" placeholder="Add Your Task">
+                    <button class="addTask" onclick="addTaskClassic()">Task</button>
+                </div>
             </div>
             <ul id="list-containerClassic">
                 <!-- <li class="checked">Test 1</li>
@@ -183,5 +245,5 @@
     </div>
     
 </body>
-<script src="/To-Do-List/weekly.js"></script>
+<script src="/weekly.js"></script>
 </html>
