@@ -996,10 +996,17 @@ function dropItem () {
 showTask();
 
 
+
+function hasOneDayPassed() {
+    var date = new Date().toLocaleDateString();
+    if( localStorage.yourapp_date == date ) 
+        return false;
+    localStorage.yourapp_date = date;
+    return true;
+  }
+
 var date = new Date();
-console.log(date.getDay());
-console.log(date.getHours());
-if(date.getDay() === 3 && date.getHours() >= 3) {
+if(date.getDay() === 3 && !hasOneDayPassed()) {
     var tasks = document.getElementsByClassName("task");
 
     for(i = 0; i < tasks.length; i++) {
@@ -1007,3 +1014,4 @@ if(date.getDay() === 3 && date.getHours() >= 3) {
     }
     saveData();
 }
+
