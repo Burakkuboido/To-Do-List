@@ -2,7 +2,7 @@ const inputBoxDF = document.getElementById("input-boxDF")
 const listContainerDF = document.getElementById("list-containerDF")
 const inputCatDF = document.getElementById("input-catagoryDF")
 
-
+showTask();
 
 function addTaskDF() {
     if(inputBoxDF.value === '') {
@@ -1022,3 +1022,4 @@ function runOncePerDay(){
 
 
 runOncePerDay(); // run the code
+
