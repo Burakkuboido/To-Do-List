@@ -1006,7 +1006,7 @@ function hasOneDayPassed() {
   }
 
 var date = new Date();
-if(date.getDay() === 3 && !hasOneDayPassed()) {
+if(date.getDay() === 3 && !hasOneDayPassed() && date.getHours() === 3) {
     var tasks = document.getElementsByClassName("task");
 
     for(i = 0; i < tasks.length; i++) {
