@@ -970,6 +970,7 @@ function moveItem () {
       target.parentNode.insertBefore(pick, target)
     else  // Insert after if moving down
       target.parentNode.insertBefore(pick, target.nextSibling)
+      saveData();
 }
  
 // Selects the item to move
@@ -992,6 +993,7 @@ function dropItem () {
   pick = '';
   document.body.classList.remove("noSelect");
   document.removeEventListener("onmouseup", dropItem)
+  saveData();
 }
 showTask();
 
