@@ -837,7 +837,7 @@ function getTasks() {
     var tasks = document.getElementsByClassName("task");
     var taskAmount = document.getElementById("taskAmount");
     var checked = document.getElementsByClassName("checked")
-    
+    saveData(); 
 
     taskAmount.innerHTML = checked.length + " / " + tasks.length;
 }
